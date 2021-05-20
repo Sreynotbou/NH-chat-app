@@ -1,19 +1,38 @@
+body{
+    background: url('https://images.squarespace-cdn.com/content/v1/54f2a674e4b0d73e9da36db5/1519102004522-UI6976DZA3JE90W2RE6V/ke17ZwdGBToddI8pDm48kOBCsfhDFShpj7B4SmuDjwF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQQwvHRbYfv-7uAqB4DqWnNkOHQaPwy8RTm10atRdm9G708R3nhEn4sCjJxmoMXwMg/DSC08986.jpg');
+    background-size:cover;
+}
 fieldset{
-    width: 500px;
+    width: 540px;
     height: 60vh;
     margin:auto;
     color: blue;
-    
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background:rgb(196, 193, 193);
 }
+
+.images img{
+    width:90px;
+    height: 50px;
+}
+
 input[type=text]{
-     width: 400px;
+     width: 460px;
      padding: 5px;
      margin-top: 330px;
-
+     margin: auto;
+     margin-left: 410px;
 }
 button{
     width: 80px;
     padding: 5px;
     background: blueviolet;
+    
+}
+ul{
+    list-style:none;
+
 }
 
