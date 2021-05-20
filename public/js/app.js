@@ -1,3 +1,4 @@
+
 function displayText(resposne){
    let texts =resposne.data;
 
@@ -13,7 +14,6 @@ function send(event){
    // for put name user into using chat
    // const name =prompt('what is your name?');
    // appendMessage('you joined');
-
 
 let text= {text:chatsend};
       const url = "";
