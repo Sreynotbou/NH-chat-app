@@ -1,5 +1,5 @@
 body{
-    background: url('https://images.squarespace-cdn.com/content/v1/54f2a674e4b0d73e9da36db5/1519102004522-UI6976DZA3JE90W2RE6V/ke17ZwdGBToddI8pDm48kOBCsfhDFShpj7B4SmuDjwF7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UQQwvHRbYfv-7uAqB4DqWnNkOHQaPwy8RTm10atRdm9G708R3nhEn4sCjJxmoMXwMg/DSC08986.jpg');
+    background: url('https://media.gettyimages.com/photos/empty-parking-lot-with-cityscape-background-picture-id1171486035');
     background-size:cover;
 }
 fieldset{
@@ -10,12 +10,13 @@ fieldset{
     display: block;
     margin-right: auto;
     margin-left: auto;
-    background:rgb(196, 193, 193);
+    background:rgb(200, 250, 250);
+    border:1px solid black;
 }
-
 .images img{
-    width:90px;
-    height: 50px;
+    width:120px;
+    height:70px;
+    border-radius: 50px;
 }
 
 input[type=text]{
