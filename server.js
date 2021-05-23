@@ -9,17 +9,19 @@ app.use(express.urlencoded());
 app.use(express.static('public'));
 
 let users=[
-    {id:1, name:'unknow' ,message:"test"},
-    {id:2, name:'sreyhieb',message:"Hello world"},
+    { name:'sreynut' ,message:"Hi gye"},
+    {name:'sreyhieb',message:"Hello world"},
 ]
 
 app.get('/users',(req,res)=>{
     res.send(users);
-});
-
-app.post('/users',(req,res)=>{
-    let newUsers =req.body;
-    users.push(newUsers);
-    res.send(newUsers);
 })
 
+app.post('/users',(req,res)=>{
+    let user={
+        username:req.body.name,
+        message:req.body.message
+    }
+    users.push(user),
+    res.send(users)
+})

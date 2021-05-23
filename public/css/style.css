@@ -1,39 +1,40 @@
 body{
-    background: url('https://media.gettyimages.com/photos/empty-parking-lot-with-cityscape-background-picture-id1171486035');
+    background:url('https://media.istockphoto.com/photos/flowers-composition-frame-border-background-beautiful-cream-roses-on-picture-id1139465321');
     background-size:cover;
 }
-fieldset{
-    width: 540px;
-    height: 60vh;
+ul{
+    list-style: none;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+hr{
+    padding:20px;
+}
+.main{
+    width: 560px;
+    height: 70vh;
     margin:auto;
-    color: blue;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    background:rgb(200, 250, 250);
-    border:1px solid black;
+    background-color:rgba(126, 119, 119, 0.61);
+    border:1px solid;
+    margin-top:15px
 }
-.images img{
-    width:120px;
-    height:70px;
-    border-radius: 50px;
+.contanier{
+    margin-left: 400px;
+    color: black;
 }
-
 input[type=text]{
-     width: 460px;
+     width:460px;
      padding: 5px;
-     margin-top: 330px;
-     margin: auto;
-     margin-left: 410px;
+     background:rgba(97, 96, 96, 0.11);
+     color: black;
 }
 button{
-    width: 80px;
-    padding: 5px;
-    background: blueviolet;
+    width: 100px;
     
+    padding:5px;
+    background: rgba(129, 120, 120, 0.158);
 }
-ul{
-    list-style:none;
 
-}
 
