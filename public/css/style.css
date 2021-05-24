@@ -9,32 +9,30 @@ h1{
     text-align: center;
     color: black;
 }
-hr{
-    padding:20px;
-}
 .main{
     width: 560px;
     height: 70vh;
     margin:auto;
     background-color:rgba(126, 119, 119, 0.61);
     border:1px solid;
-    margin-top:15px
+    margin-top:5px;
 }
 .contanier{
     margin-left: 400px;
     color: black;
+    
 }
 input[type=text]{
-     width:460px;
+     width:453px;
      padding: 5px;
-     background:rgba(97, 96, 96, 0.11);
+     background:rgba(255, 255, 255, 0.075);
      color: black;
+     margin-bottom:20px;
+
 }
 button{
     width: 100px;
     
     padding:5px;
-    background: rgba(129, 120, 120, 0.158);
+    background:rgba(73, 72, 72, 0.13);
 }
-
-

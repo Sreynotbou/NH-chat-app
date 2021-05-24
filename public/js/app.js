@@ -1,4 +1,4 @@
-let errrorRequest = (error) => console.log.error("cannot get data");
+let errrorRequest =(error)=>console.log.error("cannot get data");
 
 function resqustUser(respone) {
   let users = respone.data;
@@ -10,6 +10,9 @@ function resqustUser(respone) {
     let li = document.createElement('li');
     li.textContent = user.name + ":" + user.message;
     li.style.color="blue";
+    li.style.background=user.color;
+    li.style.margin="20px";
+    li.style.padding="10px"
     li.style.font="30px";
     ul.appendChild(li);
     main.appendChild(ul);
@@ -18,32 +21,31 @@ function resqustUser(respone) {
 }
 
 
-function send(event) {
+function send(event){
   const message = document.querySelector('#text').value;
 
   let newItem = {
-    name: 'unknown', message: message
+      name:'unknown',message:message
   };
-  const url = "http://localhost:5000/users";
-  axios
-    .post(url, newItem)
-    .then(resqustUser)
+  const url ="https://nh-chat-app.herokuapp.com/users";
+  // const url = "http://localhost:5000/users";
+  axios 
+     .post(url,newItem)
+     .then(resqustUser)
 }
 
-
-
-function loadData() {
-  const url = "http://localhost:5000/users";
+function loadData(){
+  const url = "https://nh-chat-app.herokuapp.com/users";
+  // const url = "http://localhost:5000/users";
   axios
-    .get(url)
-    .then(resqustUser)
-    .catch(errrorRequest)
+  .get(url)
+  .then(resqustUser)
+  .catch(errrorRequest)
 
 }
 
+const btnSend =document.querySelector('button');
+btnSend.addEventListener('click',send);
+setInterval(loadData,1000)
 
-
-const btnSend = document.querySelector('button');
-btnSend.addEventListener('click', send);
-
-loadData();
+// loadData();

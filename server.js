@@ -9,8 +9,9 @@ app.use(express.urlencoded());
 app.use(express.static('public'));
 
 let users=[
-    { name:'sreynut' ,message:"Hi gye"},
-    {name:'sreyhieb',message:"Hello world"},
+    { name:'sreynouth' ,message:"Hi gye",color:"lightblue"},
+    {name:'sreyhieb',message:"Hello world",color:"orange"},
+
 ]
 
 app.get('/users',(req,res)=>{
