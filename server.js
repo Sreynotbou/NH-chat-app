@@ -21,8 +21,11 @@ app.get('/users',(req,res)=>{
 app.post('/users',(req,res)=>{
     let user={
         username:req.body.name,
-        message:req.body.message
+        message:req.body.message,
+        color:req.body.color
+
     }
     users.push(user),
     res.send(users)
+    
 })

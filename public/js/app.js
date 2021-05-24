@@ -25,7 +25,7 @@ function send(event){
   const message = document.querySelector('#text').value;
 
   let newItem = {
-      name:'unknown',message:message
+      name:'unknown',message:message,color:"pink"
   };
   const url ="https://nh-chat-app.herokuapp.com/users";
   // const url = "http://localhost:5000/users";
