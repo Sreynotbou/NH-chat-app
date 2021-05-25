@@ -20,23 +20,47 @@ function resqustUser(respone) {
   }
 }
 
-
 function send(event){
   const message = document.querySelector('#text').value;
+  let user =localStorage.getItem("username")
+  let color =localStorage.getItem("color")
 
   let newItem = {
-      name:'unknown',message:message,color:"pink"
+      name:user,
+      message:message,
+      color:color,
+      
   };
-  const url ="https://nh-chat-app.herokuapp.com/users";
-  // const url = "http://localhost:5000/users";
+
+
+  // const url ="https://nh-chat-app.herokuapp.com/users";
+  const url = "http://localhost:5000/message";
+  axios 
+     .post(url,newItem)
+     .then(resqustUser)
+}
+function send(event){
+  const message = document.querySelector('.form-control').value;
+  let user =localStorage.getItem("username")
+  let color =localStorage.getItem("color")
+
+  let newItem = {
+      name:user,
+      message:message,
+      color:color,
+      
+  };
+
+  // const url ="https://nh-chat-app.herokuapp.com/users";
+  const url = "http://localhost:5000/message";
   axios 
      .post(url,newItem)
      .then(resqustUser)
 }
 
 function loadData(){
-  const url = "https://nh-chat-app.herokuapp.com/users";
-  // const url = "http://localhost:5000/users";
+  // const url = "https://nh-chat-app.herokuapp.com/users";
+  const url = "http://localhost:5000/message";
   axios
   .get(url)
   .then(resqustUser)

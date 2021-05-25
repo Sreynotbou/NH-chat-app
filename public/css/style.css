@@ -1,7 +1,8 @@
 body{
-    background:url('https://media.istockphoto.com/photos/flowers-composition-frame-border-background-beautiful-cream-roses-on-picture-id1139465321');
-    background-size:cover;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/9/94/Fild_in_kampot_cambodia.jpg');
+    background-size: cover;
 }
+
 ul{
     list-style: none;
 }
@@ -13,26 +14,31 @@ h1{
     width: 560px;
     height: 70vh;
     margin:auto;
-    background-color:rgba(126, 119, 119, 0.61);
+    background-color:rgba(177, 176, 176, 0.733);
     border:1px solid;
-    margin-top:5px;
+    margin-top:30px;
 }
-.contanier{
-    margin-left: 400px;
-    color: black;
-    
+#bolder, #italic , #underline{
+    font-weight: bolder;
+    cursor: pointer;
+}
+#italic{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+#underline{
+    text-decoration: underline;
 }
 input[type=text]{
-     width:453px;
-     padding: 5px;
-     background:rgba(255, 255, 255, 0.075);
-     color: black;
-     margin-bottom:20px;
-
+    width: 600px;
+}
+.card-footer{
+    width: 560px;
+    margin:auto;
+    background: rgb(221, 181, 138);
+    
 }
 button{
+    background: blue;
     width: 100px;
-    
-    padding:5px;
-    background:rgba(73, 72, 72, 0.13);
 }
