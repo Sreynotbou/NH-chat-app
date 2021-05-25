@@ -11,13 +11,20 @@ h1{
     color: black;
 }
 .main{
-    width: 560px;
-    height: 70vh;
+    width: 530px;
+    height: 80vh;
     margin:auto;
-    background-color:rgba(177, 176, 176, 0.733);
+    background-color:#f3eaeaea;
     border:1px solid;
     margin-top:30px;
+    overflow: scroll;
+    
 }
+img {
+    width: 100px;
+    padding: 20px;
+}
+
 #bolder, #italic , #underline{
     font-weight: bolder;
     cursor: pointer;
@@ -35,7 +42,7 @@ input[type=text]{
 .card-footer{
     width: 560px;
     margin:auto;
-    background: rgb(221, 181, 138);
+    background: hsl(221, 74%, 85%);
     
 }
 button{

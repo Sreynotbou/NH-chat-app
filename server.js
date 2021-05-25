@@ -9,8 +9,8 @@ app.use(express.urlencoded());
 app.use(express.static('public'));
 
 let message=[
-    { name:'sreynouth' ,message:"Hi gye",color:"lightblue"},
-    {name:'sreyhieb',message:"Hello world",color:"orange"},
+    { name:'sreynouth' ,message:"Hi gye",color:"lightblue",},
+    {name:'sreyhieb',message:"Hello world",color:"orange",}
 
 ]
 
@@ -22,8 +22,7 @@ app.post('/message',(req,res)=>{
     let user={
         name:req.body.name,
         message:req.body.message,
-        color:req.body.color
-
+        color:req.body.color,
     }
     message.push(user),
     res.send(message)
@@ -32,7 +31,7 @@ app.post('/message',(req,res)=>{
 
 let users=[
     { name:'sreynouth' ,color:"lightblue",password:"123"},
-    {name:'sreyhieb',color:"orange",password:"123"},
+    {name:'sreyhieb',color:"orange",password:"123"}
 ]
 
 app.get('/users',(req,res)=>res.send(users));
