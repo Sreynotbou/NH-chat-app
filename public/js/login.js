@@ -8,6 +8,7 @@ let loginProcess=(response,username,pass)=>{
       
         localStorage.setItem('username',user.name);
         localStorage.setItem('color',user.color);
+        localStorage.setItem('time',user.time);
       }
     }
 
@@ -18,6 +19,7 @@ let loginProcess=(response,username,pass)=>{
     }
   }
 
+
   let login =(e)=>{
     let username =document.querySelector('#user').value;
     let password =document.querySelector('#pwd').value;
@@ -27,6 +29,8 @@ let loginProcess=(response,username,pass)=>{
     .then(res => loginProcess(res,username,password))
   
   }
+
+
   const btnlogin =document.querySelector('#btn-login');
   // const rootEndPoint ="http://localhost:5000";
   const rootEndPoint ="https://nh-chat-app.herokuapp.com";

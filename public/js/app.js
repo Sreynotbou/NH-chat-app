@@ -7,13 +7,17 @@ function resqustUser(respone) {
   const ul = document.createElement('ul');
   for (let user of users) {
     let li = document.createElement('li');
+    let newli = document.createElement('li');
     li.textContent = user.name + ":" + user.message;
     li.style.color = "blue";
     li.style.background = user.color;
     li.style.margin = "20px";
     li.style.padding = "10px"
     li.style.font = "30px";
+    newli.textContent = user.time;
+    newli.style.marginLeft="400px";
     ul.appendChild(li);
+    ul.appendChild(newli);
     main.appendChild(ul);
 
   }
@@ -24,16 +28,19 @@ function send(event) {
   const message = document.querySelector('.form-control').value;
   let user = localStorage.getItem("username")
   let color = localStorage.getItem("color")
-
+  let today = new Date();
+  let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   let newItem = {
     name: user,
     message: message,
     color: color,
+    time:time
 
   };
   document.querySelector('.form-control').value=""
 
   
+
   const url ="https://nh-chat-app.herokuapp.com/message";
   // const url = "http://localhost:5000/message";
   axios

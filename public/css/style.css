@@ -19,10 +19,10 @@ h1{
     overflow: scroll;
     
 }
-img {
+/* img {
     width: 100px;
     padding: 20px;
-}
+} */
 
 #bolder, #italic , #underline{
     font-weight: bolder;
