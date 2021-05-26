@@ -1,14 +1,20 @@
 let loginProcess=(response,username,pass)=>{
     let users =response.data;
-    // let isLogined =false;
+    let isLogined =false;
     for (let user of users){
-      if(user.name ===username && user.password===pass ){
+      if(user.name ===username && user.password===pass && !isLogined){
         window.location.href=rootEndPoint +"/chat.html";
-        // isLogined =true;
+        isLogined =true;
       
         localStorage.setItem('username',user.name);
         localStorage.setItem('color',user.color);
       }
+    }
+
+    if(isLogined){
+      alert("Login successfully")
+    }else{
+      alert("login failed")
     }
   }
 
