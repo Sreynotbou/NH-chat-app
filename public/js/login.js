@@ -5,11 +5,9 @@ let loginProcess=(response,username,pass)=>{
       if(user.name ===username && user.password===pass ){
         window.location.href=rootEndPoint +"/chat.html";
         // isLogined =true;
-        confirm("login successfully")
+      
         localStorage.setItem('username',user.name);
         localStorage.setItem('color',user.color);
-      }else{
-          alert("Login failed")
       }
     }
   }

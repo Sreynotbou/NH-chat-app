@@ -33,7 +33,7 @@ function send(event) {
   };
 
   
-  const url ="https://nh-chat-app.herokuapp.com/users";
+  const url ="https://nh-chat-app.herokuapp.com/message";
   // const url = "http://localhost:5000/message";
   axios
     .post(url, newItem)
@@ -42,7 +42,7 @@ function send(event) {
 
 
 function loadData() {
-  const url = "https://nh-chat-app.herokuapp.com/users";
+  const url = "https://nh-chat-app.herokuapp.com/message";
   // const url = "http://localhost:5000/message";
   axios
     .get(url)
