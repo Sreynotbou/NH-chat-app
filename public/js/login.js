@@ -13,7 +13,7 @@ let loginProcess=(response,username,pass)=>{
       }
     }
   }
-  
+
   let login =(e)=>{
     let username =document.querySelector('#user').value;
     let password =document.querySelector('#pwd').value;
@@ -23,9 +23,6 @@ let loginProcess=(response,username,pass)=>{
     .then(res => loginProcess(res,username,password))
   
   }
-
-
-  
   const btnlogin =document.querySelector('#btn-login');
   const rootEndPoint ="http://localhost:5000";
   btnlogin.addEventListener('click',login);

@@ -13,11 +13,9 @@ let message=[
     {name:'sreyhieb',message:"Hello world",color:"orange",}
 
 ]
-
 app.get('/message',(req,res)=>{
     res.send(message);
 })
-
 app.post('/message',(req,res)=>{
     let user={
         name:req.body.name,

@@ -1,5 +1,4 @@
 let errrorRequest = (error) => console.log.error("cannot get data");
-
 function resqustUser(respone) {
   let users = respone.data;
   let list = document.querySelector('ul');
@@ -20,25 +19,7 @@ function resqustUser(respone) {
   }
 }
 
-function send(event) {
-  const message = document.querySelector('#text').value;
-  let user = localStorage.getItem("username")
-  let color = localStorage.getItem("color")
-
-  let newItem = {
-    name: user,
-    message: message,
-    color: color,
-
-  };
-
-
-  const url ="https://nh-chat-app.herokuapp.com/users";
-  // const url = "http://localhost:5000/message";
-  axios
-    .post(url, newItem)
-    .then(resqustUser)
-}
+// funtion for user input and send
 function send(event) {
   const message = document.querySelector('.form-control').value;
   let user = localStorage.getItem("username")
@@ -51,6 +32,7 @@ function send(event) {
 
   };
 
+  
   const url ="https://nh-chat-app.herokuapp.com/users";
   // const url = "http://localhost:5000/message";
   axios
@@ -58,9 +40,10 @@ function send(event) {
     .then(resqustUser)
 }
 
+
 function loadData() {
-  // const url = "https://nh-chat-app.herokuapp.com/users";
-  const url = "http://localhost:5000/message";
+  const url = "https://nh-chat-app.herokuapp.com/users";
+  // const url = "http://localhost:5000/message";
   axios
     .get(url)
     .then(resqustUser)
