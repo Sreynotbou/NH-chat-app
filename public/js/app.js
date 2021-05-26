@@ -31,6 +31,7 @@ function send(event) {
     color: color,
 
   };
+  document.querySelector('.form-control').value=""
 
   
   const url ="https://nh-chat-app.herokuapp.com/message";
