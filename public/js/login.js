@@ -24,5 +24,6 @@ let loginProcess=(response,username,pass)=>{
   
   }
   const btnlogin =document.querySelector('#btn-login');
-  const rootEndPoint ="http://localhost:5000";
+  // const rootEndPoint ="http://localhost:5000";
+  const rootEndPoint ="https://nh-chat-app.herokuapp.com";
   btnlogin.addEventListener('click',login);
