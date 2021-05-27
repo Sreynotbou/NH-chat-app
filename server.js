@@ -2,46 +2,34 @@ const express =require('express');
 const app =express();
 app.listen(process.env.PORT || 5000, ()=>console.log("server running..."));
 
+const fs = require('fs');
 
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.static('public'));
 
-let message=[
-    { name:'sreynouth' ,message:"Hi friends",color:"lightblue",time:"11:30:02",},
-    {name:'sreyhieb',message:"Yes,hello baby",color:"orange",time:"11:30:02",},
-    {name:'Molika',message:"How are you?",color:"pink",time:"11:30:02",},
-    {name:"Sreytouch",message:"I am fine thanks",color:"yellow",time:"11:30:02",}
-
-]
 
 app.get('/message',(req,res)=>{
-    res.send(message);
+    let users = JSON.parse(fs.readFileSync('message.json'));
+    res.send(users)
 })
-
-
+let users = [];
 app.post('/message',(req,res)=>{
-    let user={
-        name:req.body.name,
-        message:req.body.message,
-        color:req.body.color,
-        time:req.body.time,
-    }
-    message.push(user),
-    res.send(message)
+    let name = req.body;
+    users.push(name)
+    fs.writeFileSync('message.json',JSON.stringify(users))
+    res.send(users)
     
 })
+users = JSON.parse(fs.readFileSync('message.json'));
+
+app.get('/user',(req,res)=>{
+    let user = JSON.parse(fs.readFileSync('users.json'));
+    res.send(user)
+})
 
 
-
-let users=[
-    { name:'sreynouth' ,color:"lightblue",password:"123"},
-    {name:'sreyhieb',color:"orange",password:"123"},
-    {name:"Molika",color:"pink",password:"123"},
-    {name:"Sreytouch",color:"green",password:"123"},
-]
-
-app.get('/users',(req,res)=>res.send(users));
+// app.get('/users',(req,res)=>res.send(users));
 
 // let icons = [
 //     {id: 1, icon: '😓', sign: '):'},
