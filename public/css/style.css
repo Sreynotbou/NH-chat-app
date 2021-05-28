@@ -1,5 +1,5 @@
 body{
-    background:rgb(248, 211, 211)
+    background:#8283805b
 }
 
 ul{
@@ -7,34 +7,50 @@ ul{
 }
 h1{
     text-align: center;
-    color: black;
+    color:black;
 }
 .main{
     width: 530px;
     height: 80vh;
     margin:auto;
-    background-color:#f3eaeaea;
+    background-color:hsla(0, 27%, 94%, 0.842);
     border:1px solid;
     margin-top:30px;
     overflow: scroll;
     
 }
-/* img {
-    width: 100px;
-    padding: 20px;
-} */
+#pic1{
+    width: 70px;
+    height: 7vh;
+    border-radius: 360px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+p{
+    font-size: 20px;
+    margin-left: 5%;
+    color:#fff;
+    text-transform: uppercase;
+}
 
 #bolder, #italic , #underline{
     font-weight: bolder;
     cursor: pointer;
 }
+#bolder{
+    background-color: hsla(54, 97%, 75%, 0.63);
+}
 #italic{
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
+    background-color: honeydew;
 }
 
 #underline{
     text-decoration: underline;
+    background-color: gray;
 }
 input[type=text]{
     width: 600px;
@@ -48,4 +64,10 @@ input[type=text]{
 button{
     background: blue;
     width: 100px;
+}
+#singout{
+    background-color: lightcyan;
+}
+#emoji-btn{
+    background-color: blanchedalmond;
 }

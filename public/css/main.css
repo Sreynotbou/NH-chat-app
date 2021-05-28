@@ -1,6 +1,7 @@
 body{
     background: url('https://www.expatolife.com/wp-content/uploads/2020/06/Angkor-Wat-moat-Cambodia.jpg');
     background-size: cover;
+    overflow: hidden;
 }
 .container{
     margin-left: 430px;

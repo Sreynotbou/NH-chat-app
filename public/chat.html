@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,28 +10,33 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
 </head>
+
 <body>
-      <h1>NH chat-App</h1>
-      <button id="singout">singout</button>
-      <div class="card-footer">
-        
+    <h1>NH chat-App</h1>
+    <button id="singout">singout</button>
+    <div class="card-footer">
+        <div class="profile">
+            <img id="pic1" src ="images/pic1.jpeg">
+            <p>Sreyhieb</p>
+        </div>
         <div class="main">
-            <!-- <img src="images/pic1.jpeg" alt=""> -->
-            <!-- <img src="images/pic2.png" alt=""> -->
             <hr>
             <ul></ul>
         </diV>
-            <div class="input-group mt-5">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id ="bolder">B</span>
-                    <span class="input-group-text" id ="italic">I</span>
-                    <span class="input-group-text"id ="underline">U</span>
-                </div>
-                <input type="text" class="form-control">
-                <button type="submit" class="send">Send</button>
+        <div class="input-group mt-5">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="bolder">B</span>
+                <span class="input-group-text" id="italic">I</span>
+                <span class="input-group-text" id="underline">U</span>
             </div>
-      </div>
-   </div>
+            <input type="text" class="form-control" id="text">
+            <button id="emoji-btn"> &#127773;</button>
+            <button type="submit" class="send">Send</button>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
