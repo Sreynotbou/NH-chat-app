@@ -1,6 +1,6 @@
 
-const rootEndPoint ="http://localhost:5000/user";
-// const rootEndPoint ="https://nh-chat-app.herokuapp.com";
+// const rootEndPoint ="http://localhost:5000/user";
+const rootEndPoint ="https://nh-chat-app.herokuapp.com";
 function loginProcess(e){
   e.preventDefault();
     axios.get(rootEndPoint).then(response =>{

@@ -1,6 +1,6 @@
 
-// const url = "https://nh-chat-app.herokuapp.com/message";
-const url = "http://localhost:5000/message";
+const url = "https://nh-chat-app.herokuapp.com/message";
+// const url = "http://localhost:5000/message";
 
 function resqustUser(respone) {
   let users = respone.data;
@@ -93,7 +93,7 @@ btnSend.addEventListener('click', send);
 
 let haslogin = localStorage.length > 0;
 if (haslogin) {
-  // setInterval(loadData, 1000)
+  setInterval(loadData, 1000)
 } else {
   window.location.href = "../index.html";
 }
