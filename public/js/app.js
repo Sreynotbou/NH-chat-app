@@ -1,28 +1,48 @@
 
+// const url = "https://nh-chat-app.herokuapp.com/message";
+const url = "http://localhost:5000/message";
+
 function resqustUser(respone) {
   let users = respone.data;
-  console.log(users)
-  let list = document.querySelector('ul');
-  if (list !== null) list.remove();
-  const main = document.querySelector('.main');
-  const ul = document.createElement('ul');
+  const mess = document.querySelector('.message');
+  if (mess !== null && users.length !== 0){
+    mess.remove();
+  } 
+  let message = document.createElement('div');
+  message.className ="message";
+  let main = document.querySelector('.main');
 
   for (let user of users) {
     let li = document.createElement('li');
-    let newli = document.createElement('li');
-    li.textContent = user.name + ":" + user.message;
-    li.style.color = "black";
-    li.style.background = user.color;
-    li.style.margin = "20px";
-    li.style.padding = "10px"
-    li.style.font = "30px";
+    let ul= document.createElement('ul');
+    let newli = document.createElement('span');
+    let name = document.createElement('span');
+    let username = localStorage.getItem("username");
+    
+    
+    name.textContent = user.name;
+    li.textContent = user.message;
     newli.textContent = user.time;
-    newli.style.marginLeft = "400px";
-    ul.appendChild(li);
-    ul.appendChild(newli);
-    main.appendChild(ul);
-    console.log(main)
-
+   
+    if(user.name == username){
+      li.style.background = "blue";
+      newli.style.marginLeft = "50%";
+      name.style.marginLeft = "25%";
+      ul.appendChild(li);
+      message.appendChild(ul)
+      message.appendChild(newli);
+      message.appendChild(name);
+      main.appendChild(message);
+    }else{
+      ul.style.justifyContent = "flex-start";
+      newli.style.marginLeft = "30%";
+      name.style.marginLeft = "7%";
+      ul.appendChild(li);
+      message.appendChild(ul);
+      message.appendChild(name);
+      message.appendChild(newli);
+      main.appendChild(message);
+    }
   }
 }
 
@@ -40,40 +60,40 @@ document.addEventListener('DOMContentLoaded', () => {
 // funtion for user input and send
 function send(event) {
   event.preventDefault();
-  const message = document.querySelector('.form-control').value;
   let user = localStorage.getItem("username")
   let color = localStorage.getItem("color")
   let today = new Date();
   let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
   let newItem = {
     name: user,
-    message: message,
+    message: message.value,
     color: color,
     time: time
 
   };
-  document.querySelector('.form-control').value = "";
-  const url ="https://nh-chat-app.herokuapp.com/message";
-  // const url = "http://localhost:5000/message";
-  axios
-    .post(url, newItem)
-    .then(loadData)
+  
+  if(message.value !==""){
+    axios.post(url, newItem).then(loadData)
+  }
+  message.value ="";
+  
 }
+const message = document.querySelector('.form-control');
+
 function loadData() {
-  const url = "https://nh-chat-app.herokuapp.com/message";
-  // const url = "http://localhost:5000/message";
+  
   axios
     .get(url)
     .then(resqustUser)
 
 }
-
+loadData()
 const btnSend = document.querySelector('.send');
 btnSend.addEventListener('click', send);
 
 let haslogin = localStorage.length > 0;
 if (haslogin) {
-  setInterval(loadData, 1000)
+  // setInterval(loadData, 1000)
 } else {
   window.location.href = "../index.html";
 }
@@ -96,4 +116,6 @@ if(data === "sreyhieb"){
 }else{
   picture.src=pic2
 }
-console.log(data);
+
+
+

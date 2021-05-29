@@ -10,8 +10,9 @@ app.use(express.static('public'));
 
 
 app.get('/message',(req,res)=>{
-    let users = JSON.parse(fs.readFileSync('message.json'));
+    let users =JSON.parse (fs.readFileSync('message.json'));
     res.send(users)
+    
 })
 
 let users = [];
