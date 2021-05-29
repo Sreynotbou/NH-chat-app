@@ -1,30 +1,30 @@
 
-const url = "https://nh-chat-app.herokuapp.com/message";
-// const url = "http://localhost:5000/message";
+// const url = "https://nh-chat-app.herokuapp.com/message";
+const url = "http://localhost:5000/message";
 
 function resqustUser(respone) {
   let users = respone.data;
   const mess = document.querySelector('.message');
-  if (mess !== null && users.length !== 0){
+  if (mess !== null && users.length !== 0) {
     mess.remove();
-  } 
+  }
   let message = document.createElement('div');
-  message.className ="message";
+  message.className = "message";
   let main = document.querySelector('.main');
 
   for (let user of users) {
     let li = document.createElement('li');
-    let ul= document.createElement('ul');
+    let ul = document.createElement('ul');
     let newli = document.createElement('span');
     let name = document.createElement('span');
     let username = localStorage.getItem("username");
-    
-    
+
+
     name.textContent = user.name;
     li.textContent = user.message;
     newli.textContent = user.time;
-   
-    if(user.name == username){
+
+    if (user.name == username) {
       li.style.background = "blue";
       newli.style.marginLeft = "50%";
       name.style.marginLeft = "25%";
@@ -33,7 +33,7 @@ function resqustUser(respone) {
       message.appendChild(newli);
       message.appendChild(name);
       main.appendChild(message);
-    }else{
+    } else {
       ul.style.justifyContent = "flex-start";
       newli.style.marginLeft = "30%";
       name.style.marginLeft = "7%";
@@ -71,17 +71,17 @@ function send(event) {
     time: time
 
   };
-  
-  if(message.value !==""){
+
+  if (message.value !== "") {
     axios.post(url, newItem).then(loadData)
   }
-  message.value ="";
-  
+  message.value = "";
+
 }
 const message = document.querySelector('.form-control');
 
 function loadData() {
-  
+
   axios
     .get(url)
     .then(resqustUser)
@@ -105,16 +105,16 @@ const singout = document.querySelector("#singout");
 singout.addEventListener('click', logout)
 
 
-let data =localStorage.getItem('username');
-let pic1 ="../images/pic1.jpeg";
-let pic2 ="../images/pic2.png";
-let picture =document.querySelector('#pic1');
-let p =document.querySelector('p');
-p.textContent=data;
-if(data === "sreyhieb"){
-  picture.src =pic1
-}else{
-  picture.src=pic2
+let data = localStorage.getItem('username');
+let pic1 = "../images/pic1.jpeg";
+let pic2 = "../images/pic2.png";
+let picture = document.querySelector('#pic1');
+let p = document.querySelector('p');
+p.textContent = data;
+if (data === "sreyhieb") {
+  picture.src = pic1
+} else {
+  picture.src = pic2
 }
 
 

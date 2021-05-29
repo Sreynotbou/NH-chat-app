@@ -1,5 +1,5 @@
 body{
-    background:#8283805b
+    background:pink;
 }
 
 ul{
@@ -26,29 +26,32 @@ li{
     
 }
 h2{
-    margin-left: 5%;
+    margin-left: 600px;
     color:black;
 }
 .main{
     overflow: scroll;
     height: 77vh;
     background:teal;
-    width: 100%;
+    width: 650px;
 }
 #pic1{
-    width: 70px;
-    height: 7vh;
+    width: 80px;
+    height: 10vh;
     border-radius: 360px;
+    margin-bottom: 20px;
 }
 .profile{
     display: flex;
     align-items: center;
     height: 9vh;
+    margin-top: 5px;
+    
 }
 p{
     font-size: 20px;
     margin-left: 5%;
-    color:#fff;
+    color:black;
     text-transform: uppercase;
 }
 .footer{
@@ -59,6 +62,7 @@ p{
 #bolder, #italic , #underline{
     font-weight: bolder;
     cursor: pointer;
+    margin: 2px;
 }
 #bolder{
     background-color: hsla(54, 97%, 75%, 0.63);
@@ -66,34 +70,40 @@ p{
 #italic{
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
-    background-color: honeydew;
+    background-color: rgb(20, 152, 185);
 }
 
 #underline{
     text-decoration: underline;
-    background-color: gray;
+    background-color: burlywood
 }
 
 .input{
     display: flex;
     align-items: center;
     margin-top: 0;
+    width: 540px;
 
 }
 .card-footer{
-    height: 93vh;
-    width: 65vh;
-    margin-left:38%;
-    margin-bottom: 0;
-    background: hsla(54, 93%, 73%, 0.63);
+    height: 100vh;
+    width: 700px;
+    margin-left:300px;
+    margin-bottom: 100px;
+    background: hsla(54, 68%, 85%, 0.63);
     border-radius: 30px;
-   
-    
 }
-
+button{
+    width: 100px;
+    background-color: blue;
+    padding: 5px;
+}
 #singout{
-    background-color: lightcyan;
+    background-color: orange;
 }
 #emoji-btn{
     background-color: blanchedalmond;
+    width: 100px;
+    padding: 5px;
+    
 }
