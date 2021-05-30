@@ -1,6 +1,6 @@
 
-const url = "https://nh-chat-app.herokuapp.com/message";
-// const url = "http://localhost:5000/message";
+// const url = "https://nh-chat-app.herokuapp.com/message";
+const url = "http://localhost:5000/message";
 
 function resqustUser(respone) {
   let users = respone.data;
@@ -80,8 +80,6 @@ function send(event) {
   }
   message.value = "";
 }
-
-
 const message = document.querySelector('.form-control');
 // for access to server 
 function loadData() {
