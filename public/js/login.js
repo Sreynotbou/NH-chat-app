@@ -11,7 +11,6 @@ function loginProcess(e) {
         isloginded = true;
         localStorage.setItem('username', user.name);
         localStorage.setItem('color', user.color);
-
       }
     }
     if (isloginded) {

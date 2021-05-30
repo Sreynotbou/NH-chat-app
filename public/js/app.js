@@ -46,6 +46,7 @@ function resqustUser(respone) {
   }
 }
 
+// emoji in chat app
 let btnemoji = document.getElementById('emoji-btn');
 const picker = new EmojiButton();
 document.addEventListener('DOMContentLoaded', () => {
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     picker.togglePicker(btnemoji);
   });
 });
+
 
 // funtion for user input and send
 function send(event) {
@@ -68,35 +70,39 @@ function send(event) {
     name: user,
     message: message.value,
     color: color,
-    time: time
-
+    time: time,
   };
 
   if (message.value !== "") {
-    axios.post(url, newItem).then(loadData)
+    axios
+      .post(url, newItem)
+      .then(loadData)
   }
   message.value = "";
-
 }
+
+
 const message = document.querySelector('.form-control');
-
+// for access to server 
 function loadData() {
-
   axios
     .get(url)
     .then(resqustUser)
-
 }
 loadData()
+//  call functions send from input 
 const btnSend = document.querySelector('.send');
 btnSend.addEventListener('click', send);
 
+// for protect user back
 let haslogin = localStorage.length > 0;
 if (haslogin) {
   setInterval(loadData, 1000)
 } else {
   window.location.href = "../index.html";
 }
+
+// funtions user want signout 
 function logout() {
   localStorage.clear();
   window.location.href = "../index.html";
@@ -104,7 +110,7 @@ function logout() {
 const singout = document.querySelector("#singout");
 singout.addEventListener('click', logout)
 
-
+// store picture 
 let data = localStorage.getItem('username');
 let pic1 = "../images/pic1.jpeg";
 let pic2 = "../images/pic2.png";
