@@ -1,6 +1,6 @@
 
-// const url = "https://nh-chat-app.herokuapp.com/message";
-const url = "http://localhost:5000/message";
+const url = "https://nh-chat-app.herokuapp.com/message";
+// const url = "http://localhost:5000/message";
 
 function resqustUser(respone) {
   let users = respone.data;
