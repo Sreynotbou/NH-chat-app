@@ -1,8 +1,10 @@
 
 // const rootEndPoint = "http://localhost:5000/user";
-const rootEndPoint ="https://nh-chat-app.herokuapp.com/message";
+const rootEndPoint ="https://nh-chat-app.herokuapp.com/user";
 function loginProcess(e) {
   e.preventDefault();
+  let username = document.querySelector('#user');
+  let password = document.querySelector('#pwd');
   axios.get(rootEndPoint).then(response => {
     let users = response.data;
     let isloginded = false;
@@ -23,8 +25,6 @@ function loginProcess(e) {
 
   })
 }
-let username = document.querySelector('#user');
-let password = document.querySelector('#pwd');
 
 const btnlogin = document.querySelector('#btn-login');
 btnlogin.addEventListener('click', loginProcess);
